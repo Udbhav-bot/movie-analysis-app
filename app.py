@@ -8,19 +8,17 @@ import plotly.express as px
 st.set_page_config(
     page_title='Movies App',
     page_icon='🎥🎞️',
-    layout='wide',
-    
-    
+    layout='wide' 
 )
 
 st.title("Movie Suggesting Site" )
 st.sidebar.title('🎬Movies App🎬')
-st.image('papp/image.jpg',use_column_width=True)
+st.image('image.jpg',use_column_width=True)
 
 #load data 
 @st.cache_data
 def load_movies():
-    data=pd.read_csv('papp/Moviedataset.csv')
+    data=pd.read_csv('Moviedataset.csv')
     return data
 
 with  st.spinner('Loading Movies Data...'):
