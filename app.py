@@ -48,6 +48,14 @@ tabs[1].subheader('IMDB_Rating')
 tabs[1].plotly_chart(fig1, use_container_width=True)
 tabs[1].plotly_chart(fig2, use_container_width=True)
 
+#Votes
+ss=subset.sort_values(by='Votes')
+fig1=px.histogram(ss,x='Votes',y='Name',nbins=20)
+fig2=px.scatter(ss,x='Name',y='Votes',color='Year')
+tabs[1].subheader(f'{type1} stats')
+tabs[1].subheader('Votes')
+tabs[1].plotly_chart(fig1, use_container_width=True)
+tabs[1].plotly_chart(fig2, use_container_width=True)
 
 
 #Bivariate Analysis
